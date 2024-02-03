@@ -1,0 +1,23 @@
+.button {
+  display: block;
+  padding: 10px 30px;
+
+  font-family: $primary-font;
+  font-size: 17px;
+  line-height: 25px;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+
+  background-color: $primary-color;
+
+  &:hover {
+    background-color: $primary-color-light;
+    // transform: translateX(-10px);
+  }
+
+  &--light {
+    outline: 1px solid #ffffff;
+    background-color: transparent;
+  }
+}

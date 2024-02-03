@@ -2,11 +2,10 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Battle Land</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+    <link rel="preload" href="fonts/Inter/inter-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="images/svg+xml" href="favicons/icon.svg">
     <link rel="manifest" href="manifest.webmanifest">
@@ -17,7 +16,7 @@
     <header class="page__body-header main-header">
       <div class="main-header__top">
         <a class="main-header__logo" href="index.html" aria-current="page">
-          <img src="images/logo-dark.svg" width="189" height="58" alt="Battle Land logotype">
+          <img src="images/logo_dark.svg" width="189" height="58" alt="Battle Land logotype">
         </a>
         <button class="main-header__toggle toggle toggle--open toggle--nojs" type="button">
           <span class="visually-hidden">Open menu</span>
@@ -284,7 +283,7 @@
       <section class="main-content__trial trial">
         <h2 class="visually-hidden">Trial version - try for free</h2>
         <p class="trial__text">OpenType features and Variable fonts</p>
-        <button class="card__button button" type="button">Try For Free</button>
+        <button class="trial__button button" type="button">Try For Free</button>
         <picture>
           <source type="image/webp" media="(min-width: 1440px)" srcset="images/example_desktop@1x.webp 1x, images/example_desktop@2x.webp 2x" width="585" height="365">
           <source type="image/webp" media="(min-width: 768px)" srcset="images/example_tablet@1x.webp 1x, images/example_tablet@2x.webp 2x" width="708" height="366">
@@ -315,7 +314,7 @@
         <h2 class="visually-hidden">Main footer content</h2>
         <div class="main-footer__nav footer-nav">
           <article class="footer-nav__item">
-            <h3 class="footer-nav__title">Product</h3>
+            <h3 class="footer-nav__title seconadary-title">Product</h3>
             <ul class="footer-nav__list">
               <li class="footer-nav__list-item">
                 <a class="footer-nav__list-link" href="#">Overview</a>
@@ -332,7 +331,7 @@
             </ul>
           </article>
           <article class="footer-nav__item">
-            <h3 class="footer-nav__title">About</h3>
+            <h3 class="footer-nav__title seconadary-title">About</h3>
             <ul class="footer-nav__list">
               <li class="footer-nav__list-item">
                 <a class="footer-nav__list-link" href="#">Overview</a>
@@ -349,7 +348,7 @@
             </ul>
           </article>
           <article class="footer-nav__item">
-            <h3 class="footer-nav__title">Contact</h3>
+            <h3 class="footer-nav__title seconadary-title">Contact</h3>
             <ul class="footer-nav__list">
               <li class="footer-nav__list-item">
                 <a class="footer-nav__list-link" href="#">Head Office</a>
@@ -395,6 +394,6 @@
         </div>
       </section>
     </footer>
-
+    <script src="scripts/hamburger.js"></script>
   </body>
 </html>

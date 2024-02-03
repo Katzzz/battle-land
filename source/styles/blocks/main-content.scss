@@ -1,0 +1,5 @@
+.main-content {
+  @include container();
+  
+  background-color: $bg-color;
+}

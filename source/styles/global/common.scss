@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: src("../../fonts/Inter/inter-regular.woff2");
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
