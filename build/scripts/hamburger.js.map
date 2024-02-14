@@ -1,7 +1,7 @@
 {
   "version": 3,
   "sources": ["source/scripts/hamburger.js"],
-  "sourcesContent": ["const navMain = document.querySelector('.main-nav');\nconst navToggle = document.querySelector('.toggle');\n\nnavMain.classList.remove('main-nav--nojs');\nnavToggle.classList.remove('toggle--nojs');\n\nnavToggle.addEventListener('click', () => {\n  navToggle.classList.toggle('toggle--open');\n  navToggle.classList.toggle('toggle--close');\n  navMain.classList.toggle('main-nav--closed');\n  navMain.classList.toggle('main-nav--opened');\n});\n"],
-  "mappings": ";AAAA,IAAM,UAAU,SAAS,cAAc,WAAW;AAClD,IAAM,YAAY,SAAS,cAAc,SAAS;AAElD,QAAQ,UAAU,OAAO,gBAAgB;AACzC,UAAU,UAAU,OAAO,cAAc;AAEzC,UAAU,iBAAiB,SAAS,MAAM;AACxC,YAAU,UAAU,OAAO,cAAc;AACzC,YAAU,UAAU,OAAO,eAAe;AAC1C,UAAQ,UAAU,OAAO,kBAAkB;AAC3C,UAAQ,UAAU,OAAO,kBAAkB;AAC7C,CAAC;",
+  "sourcesContent": ["const navMain = document.querySelector('.main-header__nav');\nconst navToggle = document.querySelector('.toggle');\n\nnavMain.classList.remove('main-header__nav--nojs');\nnavToggle.classList.remove('toggle--nojs');\n\nnavToggle.addEventListener('click', () => {\n  navToggle.classList.toggle('toggle--open');\n  navToggle.classList.toggle('toggle--close');\n  navMain.classList.toggle('main-header__nav--closed');\n  navMain.classList.toggle('main-header__nav--opened');\n});\n"],
+  "mappings": ";AAAA,IAAM,UAAU,SAAS,cAAc,mBAAmB;AAC1D,IAAM,YAAY,SAAS,cAAc,SAAS;AAElD,QAAQ,UAAU,OAAO,wBAAwB;AACjD,UAAU,UAAU,OAAO,cAAc;AAEzC,UAAU,iBAAiB,SAAS,MAAM;AACxC,YAAU,UAAU,OAAO,cAAc;AACzC,YAAU,UAAU,OAAO,eAAe;AAC1C,UAAQ,UAAU,OAAO,0BAA0B;AACnD,UAAQ,UAAU,OAAO,0BAA0B;AACrD,CAAC;",
   "names": []
 }

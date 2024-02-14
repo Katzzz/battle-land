@@ -1,0 +1,35 @@
+.gallery {
+  @include container();
+}
+
+.gallery__text {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.gallery__grid {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.gallery__grid-item {
+  &:first-child {
+    grid-column: 2 span;
+  }
+}
+
+.gallery__grid-img {
+  &:first-child {
+    border-radius: 12px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .gallery__text {
+    max-width: 574px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

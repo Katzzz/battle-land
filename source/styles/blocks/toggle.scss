@@ -30,8 +30,8 @@
   }
 
   &--close {
-    width: 24px;
-    height: 2px;
+    width: 36px;
+    height: 3px;
 
     background-color: transparent;
 
@@ -39,8 +39,8 @@
     &::before {
       content: "";
       position: absolute;
-      width: 24px;
-      height: 2px;
+      width: 36px;
+      height: 3px;
       left: 0;
       top: 0;
       transition: 0.5s;

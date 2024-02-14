@@ -1,5 +1,37 @@
 .main-content {
-  @include container();
-  
   background-color: $bg-color;
+}
+
+.main-content__features {
+  margin-bottom: 110px;
+}
+
+.main-content__hero {
+  margin-bottom: 60px;
+}
+
+.main-content__contents {
+  margin-bottom: 110px;
+}
+
+.main-content__gallery {
+  margin-bottom: 110px;
+}
+
+.main-content__partners {
+  margin-bottom: 110px;
+}
+
+.main-content__testimonials {
+  margin-bottom: 110px;
+}
+@media (min-width: $tablet-width) {
+  .main-content__features,
+  .main-content__hero,
+  .main-content__contents,
+  .main-content__gallery,
+  .main-content__partners,
+  .main-content__testimonials {
+    margin-bottom: 140px;
+  }
 }

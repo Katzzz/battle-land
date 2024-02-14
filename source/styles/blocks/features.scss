@@ -1,9 +1,74 @@
+.features {
+  @include container();
+
+  & picture {
+    text-align: center;
+  }
+}
+
+.features__title {
+  padding-bottom: 27px;
+}
+
 .features__text {
+  margin: 0;
+  margin-bottom: 30px;
+
   font-size: 20px;
   line-height: 30px;
+  text-align: center;
+}
+
+.features__items-list {
+  @include list();
+  margin-top: 65px;
+}
+
+.features__list-item {
+  margin-bottom: 25px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+  }
+
+  &--truth::before {
+    background-image: url("../../images/icons/stack.svg#truth");
+  }
+
+  &--interface::before {
+    background-image: url("../../images/icons/stack.svg#interface");
+  }
+
+  &--rules::before {
+    background-image: url("../../images/icons/stack.svg#rules");
+  }
 }
 
 .features__items-title {
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 10px;
+
   font-size: 20px;
   line-height: 30px;
+  font-weight: 500;
+}
+
+.features__items-text {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .features__items-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 52px;
+  }
+
+  .features__items-span {
+    display: none;
+  }
 }

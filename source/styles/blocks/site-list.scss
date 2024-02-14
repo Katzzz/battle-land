@@ -1,11 +1,16 @@
 .site-list {
   @include list();
+  padding-top: 65px;
+  padding-bottom: 65px;
 
   text-align: center;
 }
 
 .site-list__link {
   @include link();
+  display: block;
+  padding-bottom: 30px;
+
   font-size: 30px;
   line-height: 45px;
   font-weight: 400;

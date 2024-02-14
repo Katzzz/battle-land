@@ -1,3 +1,28 @@
 .main-footer {
-    background-color: $bg-color;
+  padding-bottom: 40px;
+  background-color: $bg-color;
+}
+
+.main-footer__map {
+  position: relative;
+  height: 284px;
+  z-index: 5;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: rgba(2, 228, 192, 0.5);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__map {
+    height: 437px;
+  }
 }

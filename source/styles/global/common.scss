@@ -1,9 +1,10 @@
 @font-face {
-  font-family: "Inter", "Arial", sans-serif;
+  font-family: "Inter";
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: src("../../fonts/Inter/inter-regular.woff2");
+  src: url("../../fonts/Inter/inter-regular.woff2"),
+       url("../../fonts/Inter/inter-regular.woff");
 }
 
 img {
