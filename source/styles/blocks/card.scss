@@ -29,3 +29,9 @@
 
   border: none;
 }
+
+@media (min-width: $desktop-width) {
+  .card__text {
+    max-width: 334px;
+  }
+}

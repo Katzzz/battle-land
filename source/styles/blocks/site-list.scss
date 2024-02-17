@@ -14,4 +14,22 @@
   font-size: 30px;
   line-height: 45px;
   font-weight: 400;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .site-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 55px;
+  }
+
+  .site-list__link {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }

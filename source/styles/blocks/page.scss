@@ -8,4 +8,12 @@
 .page__body {
   margin: 0;
   padding: 0;
+
+  background-color: $bg-color;
+}
+
+@media (min-width: $desktop-width) {
+  .page__body-header {
+    margin-bottom: 75px;
+  }
 }

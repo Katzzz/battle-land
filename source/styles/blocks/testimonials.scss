@@ -54,3 +54,13 @@
     max-width: 265px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .testimonials__list {
+    justify-content: center;
+  }
+
+  .testimonials__list-text {
+    max-width: 334px;
+  }
+}

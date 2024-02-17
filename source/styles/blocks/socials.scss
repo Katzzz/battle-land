@@ -1,5 +1,4 @@
 .socials {
-  @include container();
   @include list();
   display: flex;
   gap: 25px;
@@ -23,10 +22,20 @@
   &--linkedin {
     background-image: url("../../images/icons/stack.svg#linkedin");
   }
+
+  &:hover {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .socials {
     padding-left: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .socials {
+    padding-top: 10px;
   }
 }

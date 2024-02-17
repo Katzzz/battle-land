@@ -1,4 +1,8 @@
 .trial {
+  text-align: center;
+}
+
+.trial__content {
   padding-top: 70px;
   padding-bottom: 30px;
   background-color: #343434;
@@ -25,7 +29,6 @@
 @media (min-width: $tablet-width) {
   .trial {
     @include container();
-    padding-bottom: 180px;
     padding-top: 0;
 
     background-color: $bg-color;
@@ -33,12 +36,11 @@
 
   .trial__content {
     max-width: 708px;
-    max-height: 540px;
     margin-left: auto;
     margin-right: auto;
 
     background-color: #343434;
-    border-radius: 33px;
+    border-radius: 33px 33px 0 0;
   }
 
   .trial__text {
@@ -48,5 +50,44 @@
 
   .trial__button {
     margin-bottom: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .trial__content {
+    max-width: fit-content;
+    max-height: 365px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 300px 200px 70px 585px;
+    grid-template-rows: 1fr 1fr;
+
+    border-radius: 33px; 
+
+    & picture {
+      grid-column: 3 / 5;
+      grid-row: 1 / -1;
+      justify-self: flex-end;
+    }
+  }
+
+  .trial__text {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    padding-left: 55px;
+    padding-top: 80px;
+    text-align: left;
+  }
+
+  .trial__button {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-self: center;
+    margin-left: 70px;
+  }
+
+  .trial__img {
+    border-radius: 0 33px 33px 0;
+    height: 100%;
   }
 }

@@ -1,13 +1,16 @@
 .main-header {
   @include container();
-
   background-color: $bg-color;
 }
 
 .main-header__top {
   padding-top: 20px;
   padding-bottom: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center
 }
+
 
 @media (max-width: 992px) {
   .main-header__nav {
@@ -31,14 +34,17 @@
       display: block;
     }
   }
+  
+  .main-header__logo {
+    @include link();
+  }
 }
 
-.main-header__top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center
-}
-
-.main-header__logo {
-  @include link();
+@media (min-width: $desktop-width) {
+  .main-header {
+    display: flex;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

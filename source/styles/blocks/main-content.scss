@@ -25,6 +25,11 @@
 .main-content__testimonials {
   margin-bottom: 110px;
 }
+
+.main-content__trial {
+  margin-bottom: 20px;
+}
+
 @media (min-width: $tablet-width) {
   .main-content__features,
   .main-content__hero,
@@ -33,5 +38,9 @@
   .main-content__partners,
   .main-content__testimonials {
     margin-bottom: 140px;
+  }
+
+  .main-content__trial {
+    margin-bottom: 70px;
   }
 }

@@ -11,14 +11,22 @@
   text-decoration: none;
 
   background-color: $primary-color;
+  border: 1px solid $primary-color;
 
   &:hover {
     background-color: $primary-color-light;
-    // transform: translateX(-10px);
+    border-color: $primary-color-light;
+    transform: translateY(-8px);
   }
 
   &--light {
-    outline: 1px solid #ffffff;
+    border-color: #ffffff;
     background-color: transparent;
+  }
+
+  &--light:hover {
+    background-color: transparent;
+    border-color: #ffffff;
+    transform: translateY(-8px);
   }
 }
