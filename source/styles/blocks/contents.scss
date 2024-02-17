@@ -1,0 +1,23 @@
+.contents {
+  @include container();
+}
+
+.contents__text {
+  margin-bottom: 44px;
+  
+  font-size: 20px;
+  line-height: 30px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .contents__items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contents__text {
+    margin-bottom: 60xp;
+  }
+}

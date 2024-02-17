@@ -1,0 +1,14 @@
+.secondary-title {
+  margin: 0;
+  
+  font-size: 36px;
+  line-height: 54px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .secondary-title {
+    font-size: 52px;
+    line-height: 62px;
+  }
+}

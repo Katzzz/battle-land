@@ -1,0 +1,37 @@
+.main-footer {
+  padding-bottom: 40px;
+  background-color: $bg-color;
+}
+
+.main-footer__map {
+  position: relative;
+  min-height: 284px;
+}
+
+.main-footer__content {
+  @include container();
+}
+
+.main-footer__nav {
+  margin-top: 70px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-footer__map-img {
+    max-width: unset;
+    width: 100%;
+    min-height: 437px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-footer__content {
+    @include container();
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .main-footer__contacts {
+    margin-top: 70px;
+  }
+}

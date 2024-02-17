@@ -1,0 +1,37 @@
+.footer-nav__item {
+  padding-bottom: 35px;
+}
+
+.footer-nav__list {
+  @include list();
+}
+
+.footer-nav__list-link {
+  display: block;
+  padding-bottom: 10px;
+
+  color: $bg-color-light;
+  text-decoration: none;
+
+  &:hover {
+    color: $secondary-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .footer-nav {
+    display: flex;
+    gap: 75px;
+  }
+
+  .footer-nav__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .footer-nav__title {
+    margin-top: 0;
+  }
+}

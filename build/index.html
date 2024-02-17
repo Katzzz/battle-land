@@ -2,11 +2,10 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
-    <title>Название проекта</title>
+    <title>Battle Land</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" href="styles/styles.css">
-    <!-- <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"> -->
+    <link rel="preload" href="fonts/Inter/inter-regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="images/svg+xml" href="favicons/icon.svg">
     <link rel="manifest" href="manifest.webmanifest">
@@ -17,14 +16,14 @@
     <header class="page__body-header main-header">
       <div class="main-header__top">
         <a class="main-header__logo" href="index.html" aria-current="page">
-          <img src="images/logo-dark.svg" width="189" height="58" alt="Battle Land logotype">
+          <img src="images/logo_dark.svg" width="189" height="58" alt="Battle Land logotype">
         </a>
         <button class="main-header__toggle toggle toggle--open toggle--nojs" type="button">
           <span class="visually-hidden">Open menu</span>
         </button>
       </div>
       
-      <nav class="main-header__nav">
+      <nav class="main-header__nav main-header__nav--nojs main-header__nav--closed">
         <ul class="main-header__nav-list site-list">
           <li class="site-list__item">
             <a class="site-list__link" href="index.html" aria-current="page">Home</a>
@@ -47,7 +46,7 @@
       <section class="main-content__hero hero">
         <h1 class="hero__title">
           Work
-          <span class="hero__title-loop">fast</span>
+          <!-- <span class="hero__title-loop">fast</span> -->
         </h1>
         <p class="hero__text">Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.</p>
         <ul class="hero__list">
@@ -58,29 +57,41 @@
             <a class="hero__item-link button button--light" href="#">Learn More</a>
           </li>
         </ul>
+        <div class="hero__picture">
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/screens_desktop@1x.webp, images/screens_desktop@2x.webp 2x" width="1552" height="841">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/screens_tablet@1x.webp, images/screens_tablet@2x.webp 2x" width="755" height="663">
+            <source type="image/webp" srcset="images/screens_mobile@1x.webp, images/screens_mobile@2x.webp 2x">
+            <source type="image/png" media="(min-width: 1440px)" srcset="images/screens_desktop@1x.png, images/screens_desktop@2x.png 2x" width="1552" height="841">
+            <source type="image/png" media="(min-width: 768px)" srcset="images/screens_tablet@1x.png, images/screens_tablet@2x.png 2x" width="755" height="663">
+            <img src="images/screens_mobile@1x.png" srcset="images/screens_mobile@2x.png 2x" width="471" height="435" alt="Features">
+          </picture>
+        </div>
       </section>
 
       <section class="main-content__features features">
         <h2 class="features__title secondary-title">Features</h2>
         <p class="features__text">Most calendars are designed for teams. Slate is designed for freelancers who want a simple way to plan their schedule.</p>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="images/features_desktop@1x.webp, images/features_desktop@2x.webp 2x" width="784" height="799">
-          <source type="image/webp" media="(min-width: 768px)" srcset="images/features_tablet@1x.webp, images/features_tablet@2x.webp 2x" width="758" height="821">
-          <source type="image/webp" srcset="images/features_mobile@1x.webp, images/features_mobile@2x.webp 2x">
-          <source type="image/png" media="(min-width: 1440px)" srcset="images/features_desktop@1x.png, images/features_desktop@2x.png 2x" width="784" height="799">
-          <source type="image/png" media="(min-width: 768px)" srcset="images/features_tablet@1x.png, images/features_tablet@2x.png 2x" width="758" height="821">
-          <img src="images/features_mobile@1x.png" srcset="images/features_mobile@2x.png 2x" width="406" height="425" alt="Features">
-        </picture>
+        <div class="features__img">
+          <picture>
+            <source type="image/webp" media="(min-width: 1220px)" srcset="images/features_desktop@1x.webp, images/features_desktop@2x.webp 2x" width="784" height="799">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/features_tablet@1x.webp, images/features_tablet@2x.webp 2x" width="758" height="821">
+            <source type="image/webp" srcset="images/features_mobile@1x.webp, images/features_mobile@2x.webp 2x">
+            <source type="image/png" media="(min-width: 1220px)" srcset="images/features_desktop@1x.png, images/features_desktop@2x.png 2x" width="784" height="799">
+            <source type="image/png" media="(min-width: 768px)" srcset="images/features_tablet@1x.png, images/features_tablet@2x.png 2x" width="758" height="821">
+            <img src="images/features_mobile@1x.png" srcset="images/features_mobile@2x.png 2x" width="406" height="425" alt="Features">
+          </picture>
+        </div>
         <ul class="features__items-list">
-          <li class="features__list-item">
-            <h3 class="features__items-title">A single source of truth</h3>
+          <li class="features__list-item features__list-item--truth">
+            <h3 class="features__items-title">A single source<span class="features__items-span">of truth</span></h3>
             <p class="features__items-text">When you add work to your Slate calendar we automatically calculate useful insights</p>
           </li>
-          <li class="features__list-item">
+          <li class="features__list-item features__list-item--interface">
             <h3 class="features__items-title">Intuitive interface</h3>
             <p class="features__items-text">When you add work to your Slate calendar we automatically calculate useful insights</p>
           </li>
-          <li class="features__list-item">
+          <li class="features__list-item features__list-item--rules">
             <h3 class="features__items-title">Or with rules</h3>
             <p class="features__items-text">When you add work to your Slate calendar we automatically calculate useful insights</p>
           </li>
@@ -90,32 +101,34 @@
       <section class="main-content__contents contents">
         <h2 class="contents__title secondary-title">Contents</h2>
         <p class="contents__text">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
-        <article class="contents__item card">
-          <h3 class="card__title">Work</h3>
-          <p class="card__text">Ever wondered if you're too reliant on a client for work? Slate helps you identify.</p>
-          <button class="card__button button" type="button">Sign Up</button>
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/macbook_desktop@1x.webp, images/macbook_desktop@2x.webp 2x" width="406" height="277">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/macbook_tablet@1x.webp, images/macbook_tablet@2x.webp 2x" width="346" height="224">
-            <source type="image/webp" srcset="images/macbook_mobile@1x.webp, images/macbook_mobile@2x.webp 2x">
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/macbook_desktop@1x.png, images/macbook_desktop@2x.png 2x" width="406" height="277">
-            <source type="image/png" media="(min-width: 768px)" srcset="images/macbook_tablet@1x.png, images/macbook_tablet@2x.png 2x" width="346" height="224">
-            <img class="hero__img" src="images/macbook_mobile@1x.png" srcset="images/macbook_mobile@2x.png 2x" width="298" height="175" alt="Sign up">
-          </picture>
-        </article>
-        <article class="contents__item card">
-          <h3 class="card__title">Design with real data</h3>
-          <p class="card__text">Ever wondered if you're too reliant on a client for work? Slate helps you identify .</p>
-          <button class="card__button button" type="button">Try For Free</button>
-          <picture>
-            <source type="image/webp" media="(min-width: 1440px)" srcset="images/design_desktop@1x.webp, images/design_desktop@2x.webp 2x" width="442" height="338">
-            <source type="image/webp" media="(min-width: 768px)" srcset="images/design_tablet@1x.webp, images/design_tablet@2x.webp 2x" width="346" height="224">
-            <source type="image/webp" srcset="images/design_mobile@1x.webp, images/design_mobile@2x.webp 2x">
-            <source type="image/png" media="(min-width: 1440px)" srcset="images/design_desktop@1x.png, images/design_desktop@2x.png 2x" width="442" height="338">
-            <source type="image/png" media="(min-width: 768px)" srcset="images/design_tablet@1x.png, images/design_tablet@2x.png 2x" width="346" height="224">
-            <img class="hero__img" src="images/design_mobile@1x.png" srcset="images/design_mobile@2x.png 2x" width="343" height="267" alt="Sign up">
-          </picture>
-        </article>
+        <div class="contents__items">
+          <article class="contents__item card">
+            <h3 class="card__title">Work</h3>
+            <p class="card__text">Ever wondered if you're too reliant on a client for work? Slate helps you identify.</p>
+            <button class="card__button button" type="button">Sign Up</button>
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="images/macbook_desktop@1x.webp, images/macbook_desktop@2x.webp 2x" width="406" height="277">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/macbook_tablet@1x.webp, images/macbook_tablet@2x.webp 2x" width="346" height="224">
+              <source type="image/webp" srcset="images/macbook_mobile@1x.webp, images/macbook_mobile@2x.webp 2x">
+              <source type="image/png" media="(min-width: 1440px)" srcset="images/macbook_desktop@1x.png, images/macbook_desktop@2x.png 2x" width="406" height="277">
+              <source type="image/png" media="(min-width: 768px)" srcset="images/macbook_tablet@1x.png, images/macbook_tablet@2x.png 2x" width="346" height="224">
+              <img class="hero__img" src="images/macbook_mobile@1x.png" srcset="images/macbook_mobile@2x.png 2x" width="298" height="175" alt="Sign up">
+            </picture>
+          </article>
+          <article class="contents__item card">
+            <h3 class="card__title">Design with real data</h3>
+            <p class="card__text">Ever wondered if you're too reliant on a client for work? Slate helps you identify.</p>
+            <button class="card__button button" type="button">Try For Free</button>
+            <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="images/design_desktop@1x.webp, images/design_desktop@2x.webp 2x" width="442" height="338">
+              <source type="image/webp" media="(min-width: 768px)" srcset="images/design_tablet@1x.webp, images/design_tablet@2x.webp 2x" width="346" height="224">
+              <source type="image/webp" srcset="images/design_mobile@1x.webp, images/design_mobile@2x.webp 2x">
+              <source type="image/png" media="(min-width: 1440px)" srcset="images/design_desktop@1x.png, images/design_desktop@2x.png 2x" width="442" height="338">
+              <source type="image/png" media="(min-width: 768px)" srcset="images/design_tablet@1x.png, images/design_tablet@2x.png 2x" width="346" height="224">
+              <img class="hero__img" src="images/design_mobile@1x.png" srcset="images/design_mobile@2x.png 2x" width="343" height="267" alt="Sign up">
+            </picture>
+          </article>
+        </div>
       </section>
       <section class="main-content__gallery gallery">
         <h2 class="gallery__title secondary-title">Gallery</h2>
@@ -128,7 +141,7 @@
               <source type="image/webp" srcset="images/card1_mobile@1x.webp, images/card1_mobile@2x.webp 2x">
               <source type="image/jpg" media="(min-width: 1440px)" srcset="images/card1_desktop@1x.jpg, images/card1_desktop@2x.jpg 2x" width="595" height="594">
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/card1_tablet@1x.jpg, images/card1_tablet@2x.jpg 2x" width="708" height="403">
-              <img class="gallery__grid-img" src="images/card1_mobile@1x.jpg" srcset="images/card1_mobile@2x.jpg 2x" width="431" height="404" alt="Card one image">
+              <img class="gallery__grid-img" src="images/card1_mobile@1x.png" srcset="images/card1_mobile@2x.png 2x" width="431" height="404" alt="Card one image">
             </picture>
           </article>
           <article class="gallery__grid-item">
@@ -138,7 +151,7 @@
               <source type="image/webp" srcset="images/card2_mobile@1x.webp, images/card2_mobile@2x.webp 2x">
               <source type="image/jpg" media="(min-width: 1440px)" srcset="images/card2_desktop@1x.jpg, images/card2_desktop@2x.jpg 2x" width="595" height="176">
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/card2_tablet@1x.jpg, images/card2_tablet@2x.jpg 2x" width="345" height="206">
-              <img class="gallery__grid-img" src="images/card2_mobile@1x.jpg" srcset="images/card2_mobile@2x.jpg 2x" width="207" height="207" alt="Card two image">
+              <img class="gallery__grid-img" src="images/card2_mobile@1x.png" srcset="images/card2_mobile@2x.png 2x" width="207" height="207" alt="Card two image">
             </picture>
           </article>
           <article class="gallery__grid-item">
@@ -148,7 +161,7 @@
               <source type="image/webp" srcset="images/card3_mobile@1x.webp, images/card3_mobile@2x.webp 2x">
               <source type="image/jpg" media="(min-width: 1440px)" srcset="images/card3_desktop@1x.jpg, images/card3_desktop@2x.jpg 2x" width="281" height="176">
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/card3_tablet@1x.jpg, images/card3_tablet@2x.jpg 2x" width="345" height="206">
-              <img class="gallery__grid-img" src="images/card3_mobile@1x.jpg" srcset="images/card3_mobile@2x.jpg 2x" width="207" height="207" alt="Card three image">
+              <img class="gallery__grid-img" src="images/card3_mobile@1x.png" srcset="images/card3_mobile@2x.png 2x" width="207" height="207" alt="Card three image">
             </picture>
           </article>
           <article class="gallery__grid-item">
@@ -158,7 +171,7 @@
               <source type="image/webp" srcset="images/card4_mobile@1x.webp, images/card4_mobile@2x.webp 2x">
               <source type="image/jpg" media="(min-width: 1440px)" srcset="images/card4_desktop@1x.jpg, images/card4_desktop@2x.jpg 2x" width="281" height="176">
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/card4_tablet@1x.jpg, images/card4_tablet@2x.jpg 2x" width="345" height="206">
-              <img class="gallery__grid-img" src="images/card4_mobile@1x.jpg" srcset="images/card4_mobile@2x.jpg 2x" width="207" height="207" alt="Card four image">
+              <img class="gallery__grid-img" src="images/card4_mobile@1x.png" srcset="images/card4_mobile@2x.png 2x" width="207" height="207" alt="Card four image">
             </picture>
           </article>
           <article class="gallery__grid-item">
@@ -168,7 +181,7 @@
               <source type="image/webp" srcset="images/card5_mobile@1x.webp, images/card5_mobile@2x.webp 2x">
               <source type="image/jpg" media="(min-width: 1440px)" srcset="images/card5_desktop@1x.jpg, images/card5_desktop@2x.jpg 2x" width="177" height="176">
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/card5_tablet@1x.jpg, images/card5_tablet@2x.jpg 2x" width="345" height="206">
-              <img class="gallery__grid-img" src="images/card5_mobile@1x.jpg" srcset="images/card5_mobile@2x.jpg 2x" width="207" height="207" alt="Card five image">
+              <img class="gallery__grid-img" src="images/card5_mobile@1x.png" srcset="images/card5_mobile@2x.png 2x" width="207" height="207" alt="Card five image">
             </picture>
           </article>
           <article class="gallery__grid-item">
@@ -178,7 +191,7 @@
               <source type="image/webp" srcset="images/card6_mobile@1x.webp, images/card6_mobile@2x.webp 2x">
               <source type="image/jpg" media="(min-width: 1440px)" srcset="images/card6_desktop@1x.jpg, images/card6_desktop@2x.jpg 2x" width="177" height="176">
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/card6_tablet@1x.jpg, images/card6_tablet@2x.jpg 2x" width="345" height="206">
-              <img class="gallery__grid-img" src="images/card6_mobile@1x.jpg" srcset="images/card6_mobile@2x.jpg 2x" width="207" height="207" alt="Card six image">
+              <img class="gallery__grid-img" src="images/card6_mobile@1x.png" srcset="images/card6_mobile@2x.png 2x" width="207" height="207" alt="Card six image">
             </picture>
           </article>
           <article class="gallery__grid-item">
@@ -188,7 +201,7 @@
               <source type="image/webp" srcset="images/card7_mobile@1x.webp, images/card7_mobile@2x.webp 2x">
               <source type="image/jpg" media="(min-width: 1440px)" srcset="images/card7_desktop@1x.jpg, images/card7_desktop@2x.jpg 2x" width="177" height="176">
               <source type="image/jpg" media="(min-width: 768px)" srcset="images/card7_tablet@1x.jpg, images/card7_tablet@2x.jpg 2x" width="345" height="206">
-              <img class="gallery__grid-img" src="images/card7_mobile@1x.jpg" srcset="images/card7_mobile@2x.jpg 2x" width="207" height="207" alt="Card seven image">
+              <img class="gallery__grid-img" src="images/card7_mobile@1x.png" srcset="images/card7_mobile@2x.png 2x" width="207" height="207" alt="Card seven image">
             </picture>
           </article>
         </div>
@@ -196,35 +209,35 @@
 
       <section class="main-content__partners partners">
         <h2 class="partners__title secondary-title">Patners</h2>
-        <p class="patners__text">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
+        <p class="partners__text">We focus on ergonomics and meeting you where you work. It's only a keystroke away.</p>
         <ul class="partners__list">
           <li class="partners__list-item">
-            <a class="partners__item-link" href="#">
+            <a class="partners__item-link partners__item-link--appstore" href="#">
               <span class="visually-hidden">AppStore</span>
             </a>
           </li>
           <li class="partners__list-item">
-            <a class="partners__item-link" href="#">
+            <a class="partners__item-link partners__item-link--apiary" href="#">
               <span class="visually-hidden">Apiary</span>
             </a>
           </li>
           <li class="partners__list-item">
-            <a class="partners__item-link" href="#">
+            <a class="partners__item-link partners__item-link--android" href="#">
               <span class="visually-hidden">Android</span>
             </a>
           </li>
           <li class="partners__list-item">
-            <a class="partners__item-link" href="#">
+            <a class="partners__item-link partners__item-link--basecamp" href="#">
               <span class="visually-hidden">BaseCamp</span>
             </a>
           </li>
           <li class="partners__list-item">
-            <a class="partners__item-link" href="#">
+            <a class="partners__item-link partners__item-link--airbnb" href="#">
               <span class="visually-hidden">AirBnB</span>
             </a>
           </li>
           <li class="partners__list-item">
-            <a class="partners__item-link" href="#">
+            <a class="partners__item-link partners__item-link--ibm" href="#">
               <span class="visually-hidden">IBM</span>
             </a>
           </li>
@@ -283,16 +296,18 @@
 
       <section class="main-content__trial trial">
         <h2 class="visually-hidden">Trial version - try for free</h2>
-        <p class="trial__text">OpenType features and Variable fonts</p>
-        <button class="card__button button" type="button">Try For Free</button>
-        <picture>
-          <source type="image/webp" media="(min-width: 1440px)" srcset="images/example_desktop@1x.webp, images/example_desktop@2x.webp 2x" width="585" height="365">
-          <source type="image/webp" media="(min-width: 768px)" srcset="images/example_tablet@1x.webp, images/example_tablet@2x.webp 2x" width="708" height="366">
-          <source type="image/webp" srcset="images/example_mobile@1x.webp, images/example_mobile@2x.webp 2x">
-          <source type="image/png" media="(min-width: 1440px)" srcset="images/example_desktop@1x.png, images/example_desktop@2x.png 2x" width="585" height="365">
-          <source type="image/png" media="(min-width: 768px)" srcset="images/example_tablet@1x.png, images/example_tablet@2x.png 2x" width="708" height="366">
-          <img src="images/example_mobile@1x.png" srcset="images/example_mobile@2x.png 2x" width="479" height="321" alt="Try for free - trial version">
-        </picture>
+        <div class="trial__content">
+          <p class="trial__text">OpenType features and Variable fonts</p>
+          <button class="trial__button button" type="button">Try For Free</button>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="images/example_desktop@1x.webp, images/example_desktop@2x.webp 2x" width="585" height="453">
+            <source type="image/webp" media="(min-width: 768px)" srcset="images/example_tablet@1x.webp, images/example_tablet@2x.webp 2x" width="708" height="366">
+            <source type="image/webp" srcset="images/example_mobile@1x.webp, images/example_mobile@2x.webp 2x">
+            <source type="image/png" media="(min-width: 1440px)" srcset="images/example_desktop@1x.png, images/example_desktop@2x.png 2x" width="585" height="453">
+            <source type="image/png" media="(min-width: 768px)" srcset="images/example_tablet@1x.png, images/example_tablet@2x.png 2x" width="708" height="366">
+            <img class="trial__img" src="images/example_mobile@1x.png" srcset="images/example_mobile@2x.png 2x" width="479" height="321" alt="Try for free - trial version">
+          </picture>
+        </div>
       </section>
 
     </main>
@@ -307,7 +322,7 @@
           <source type="image/webp" srcset="images/map_mobile@1x.webp, images/map_mobile@2x.webp 2x">
           <source type="image/png" media="(min-width: 1440px)" srcset="images/map_desktop@1x.png, images/map_desktop@2x.png 2x" width="1579" height="556">
           <source type="image/png" media="(min-width: 768px)" srcset="images/map_tablet@1x.png, images/map_tablet@2x.png 2x" width="768" height="437">
-          <img src="images/map_mobile@1x.png" srcset="images/map_mobile@2x.png 2x" width="479" height="320" alt="Our coordinations">
+          <img class="main-footer__map-img" src="images/map_mobile@1x.png" srcset="images/map_mobile@2x.png 2x" width="479" height="284" alt="Our coordinations">
         </picture>
       </section>
 
@@ -315,7 +330,7 @@
         <h2 class="visually-hidden">Main footer content</h2>
         <div class="main-footer__nav footer-nav">
           <article class="footer-nav__item">
-            <h3 class="footer-nav__title">Product</h3>
+            <h3 class="footer-nav__title seconadary-title">Product</h3>
             <ul class="footer-nav__list">
               <li class="footer-nav__list-item">
                 <a class="footer-nav__list-link" href="#">Overview</a>
@@ -332,7 +347,7 @@
             </ul>
           </article>
           <article class="footer-nav__item">
-            <h3 class="footer-nav__title">About</h3>
+            <h3 class="footer-nav__title seconadary-title">About</h3>
             <ul class="footer-nav__list">
               <li class="footer-nav__list-item">
                 <a class="footer-nav__list-link" href="#">Overview</a>
@@ -349,7 +364,7 @@
             </ul>
           </article>
           <article class="footer-nav__item">
-            <h3 class="footer-nav__title">Contact</h3>
+            <h3 class="footer-nav__title seconadary-title">Contact</h3>
             <ul class="footer-nav__list">
               <li class="footer-nav__list-item">
                 <a class="footer-nav__list-link" href="#">Head Office</a>
@@ -377,17 +392,17 @@
           </ul>
           <ul class="footer-contacts__socials socials">
             <li class="socials__item">
-              <a class="socials__item-link" href="#">
+              <a class="socials__item-link socials__item-link--twitter" href="#">
                 <span class="visually-hidden">We on Twitter</span>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__item-link" href="#">
+              <a class="socials__item-link socials__item-link--facebook" href="#">
                 <span class="visually-hidden">We on Facebook</span>
               </a>
             </li>
             <li class="socials__item">
-              <a class="socials__item-link" href="#">
+              <a class="socials__item-link socials__item-link--linkedin" href="#">
                 <span class="visually-hidden">We on LinkedIn</span>
               </a>
             </li>
@@ -395,6 +410,6 @@
         </div>
       </section>
     </footer>
-
+    <script src="scripts/hamburger.js"></script>
   </body>
 </html>
