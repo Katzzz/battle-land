@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["source/scripts/required.js"],
-  "sourcesContent": ["const submitBtn = document.querySelector('.form__bottom-btn');\n\nsubmitBtn.addEventListener('click', () => {\n  const inputs = document.querySelectorAll('input[required]');\n  for(let i = 0;i < inputs.length;i++){\n    inputs[i].classList.add('form-group__item-input--error');\n  }\n});\n"],
-  "mappings": ";AAAA,IAAM,YAAY,SAAS,cAAc,mBAAmB;AAE5D,UAAU,iBAAiB,SAAS,MAAM;AACxC,QAAM,SAAS,SAAS,iBAAiB,iBAAiB;AAC1D,WAAQ,IAAI,GAAE,IAAI,OAAO,QAAO,KAAI;AAClC,WAAO,CAAC,EAAE,UAAU,IAAI,+BAA+B;AAAA,EACzD;AACF,CAAC;",
-  "names": []
-}

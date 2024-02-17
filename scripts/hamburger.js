@@ -1,0 +1,1 @@
+var s=document.querySelector(".main-header__nav"),e=document.querySelector(".toggle");s.classList.remove("main-header__nav--nojs");e.classList.remove("toggle--nojs");e.addEventListener("click",()=>{e.classList.toggle("toggle--open"),e.classList.toggle("toggle--close"),s.classList.toggle("main-header__nav--closed"),s.classList.toggle("main-header__nav--opened")});
